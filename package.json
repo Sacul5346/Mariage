@@ -1,0 +1,14 @@
+{
+  "name": "mariage-photos",
+  "version": "1.0.0",
+  "description": "Site de collecte de photos pour le mariage",
+  "scripts": {
+    "start": "serve -s"
+  },
+  "dependencies": {
+    "serve": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

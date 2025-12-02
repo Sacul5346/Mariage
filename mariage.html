@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos du Mariage Hugo & Ravaka</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            border-radius: 25px;
+            padding: 60px 50px;
+            text-align: center;
+            box-shadow: 0 25px 70px rgba(0,0,0,0.2);
+            max-width: 700px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+        }
+
+        .hearts {
+            font-size: 4rem;
+            margin-bottom: 25px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        h1 {
+            color: #d63384;
+            margin-bottom: 20px;
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            color: #6c757d;
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #d63384 0%, #fd7e14 100%);
+            color: white;
+            padding: 22px 50px;
+            text-decoration: none;
+            border-radius: 60px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 30px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(214, 51, 132, 0.4);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(214, 51, 132, 0.6);
+        }
+
+        .btn::after {
+            content: "📸";
+            margin-left: 12px;
+            font-size: 1.3rem;
+        }
+
+        .instructions {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 35px;
+            border-radius: 20px;
+            margin-top: 40px;
+            text-align: left;
+            border-left: 6px solid #d63384;
+        }
+
+        .instructions h3 {
+            color: #495057;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .instructions ol {
+            padding-left: 25px;
+        }
+
+        .instructions li {
+            margin-bottom: 18px;
+            color: #6c757d;
+            line-height: 1.6;
+            font-size: 1.1rem;
+            padding-left: 10px;
+        }
+
+        .instructions li strong {
+            color: #d63384;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #d63384;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            margin-right: 12px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .footer {
+            margin-top: 40px;
+            color: #adb5bd;
+            font-size: 1rem;
+            font-style: italic;
+        }
+
+        .emoji {
+            font-size: 1.3rem;
+            margin-right: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 25px;
+                margin: 15px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .btn {
+                padding: 20px 35px;
+                font-size: 1.3rem;
+                width: 100%;
+            }
+            
+            .instructions {
+                padding: 25px 20px;
+            }
+            
+            .hearts {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                font-size: 1.1rem;
+                padding: 18px 25px;
+            }
+            
+            .instructions li {
+                font-size: 1rem;
+            }
+        }
+
+        /* Animation d'entrée */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hearts">💑💕</div>
+        <h1>Photos du Mariage<br>Hugo & Ravaka</h1>
+        <p class="subtitle">Aidez-nous à créer notre plus bel album souvenir en partageant vos plus belles photos de cette journée magique !</p>
+        
+        <button class="btn" onclick="openForm()">
+            Partager mes photos
+        </button>
+
+        <div class="instructions">
+            <h3>📋 Comment partager vos photos :</h3>
+            <ol>
+                <li><span class="step-number">1</span> <strong>Cliquez sur le bouton ci-dessus</strong></li>
+                <li><span class="step-number">2</span> Le formulaire Google s'ouvrira dans un nouvel onglet</li>
+                <li><span class="step-number">3</span> <strong>Glissez-déposez</strong> jusqu'à 5 photos (ou cliquez pour sélectionner)</li>
+                <li><span class="step-number">4</span> Cliquez sur <strong>"Envoyer"</strong> en bas du formulaire</li>
+                <li><span class="step-number">5</span> <strong>C'est terminé !</strong> Merci beaucoup ! 💝</li>
+            </ol>
+        </div>
+
+        <div class="footer">
+            <p>Merci de rendre notre album de mariage encore plus spécial !</p>
+        </div>
+    </div>
+
+    <script>
+        // ⚠️ REMPLACER CE LIEN PAR VOTRE VRAI LIEN GOOGLE FORMS !
+        const VOTRE_LIEN_GOOGLE_FORMS = "https://docs.google.com/forms/d/e/1FAIpQLSe_ooc2nlcFuQrrn1AF49LJlR61THuBOkSMd2jXb60QgXCmjw/viewform?usp=dialog";
+        
+        function openForm() {
+            // Ouvre le formulaire dans un nouvel onglet
+            window.open(VOTRE_LIEN_GOOGLE_FORMS, '_blank');
+            
+            // Message de confirmation (optionnel)
+            console.log("Formulaire ouvert !");
+        }
+        
+        // Animation au chargement
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("Page de collecte photos chargée - Hugo & Ravaka");
+        });
+    </script>
+</body>
+</html>
